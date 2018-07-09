@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>AirBNB</title>
+  <meta name="description" content="This is a copy of airbnb landing page">
+  <meta name="Simmy" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/airbnbfavicon.png">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-third column" style="width: 38% !important;">
+        <div class="boxes">
+          <h4>Find Homes On AirBnb</h4>
+          <h6>Discover entire homes and private rooms perfect for any trip.</h6>
+          <form>
+            <div class="row">
+              <label for="exampleRecipientInput">Where</label>
+              <select class="u-full-width" id="exampleRecipientInput">
+                <option value="Option 1">India</option>
+                <option value="Option 2">Japan</option>
+                <option value="Option 3">China</option>
+              </select>
+            </div>
+            <div class="row">
+              <div class="six columns" id="date-box">
+                <label for="exampleEmailInput">Check-In</label>
+                <input class="u-full-width" type="date" placeholder="dd-mm-yyyy" id="checkIn">
+              </div>
+              <div class="six columns" id="date-box">
+                <label for="exampleEmailInput">Check-Out</label>
+                <input class="u-full-width" type="date" placeholder="dd-mm-yyyy" id="checkOut">
+              </div>
+            </div>
+            <div class="row">
+              <div class="six columns">
+                <label for="exampleRecipientInput">Adults</label>
+                <select class="u-full-width" id="exampleRecipientInput">
+                  <option value="Option 1">1 Adult</option>
+                  <option value="Option 2">2 Adults</option>
+                  <option value="Option 3">More</option>
+                </select>
+              </div>
+              <div class="six columns">
+                <label for="exampleRecipientInput">Childrens</label>
+                <select class="u-full-width" id="exampleRecipientInput">
+                  <option value="Option 1">1 Children</option>
+                  <option value="Option 2">2 Childrens</option>
+                  <option value="Option 3">More</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <input class="button-primary" id="button" type="submit" value="Search">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container1">
+    <h4>What guests are saying about homes in India</h4>
+    <div>
+      <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 20px; width: 20px; fill: rgb(255, 180, 0);position: absolute; padding-top: 2px;">
+        <path d="m21.95 9.48a.84.84 0 0 0 -.87-.48h-4.62a.5.5 0 0 0 0 1l4.14.01-4.81 4.17a.5.5 0 0 0 -.14.57l2.65 6.38-6.07-3.72a.5.5 0 0 0 -.52 0l-6.08 3.72 2.65-6.37a.5.5 0 0 0 -.13-.57l-4.75-4.18h5.75a.5.5 0 0 0 .46-.3l2.37-5.37 1.58 3.57a.5.5 0 0 0 .91-.41l-1.72-3.88a.8.8 0 0 0 -1.56-.01l-2.38 5.39h-5.9a.83.83 0 0 0 -.87.48.85.85 0 0 0 .32.96l4.85 4.25-2.78 6.67a.81.81 0 0 0 .16.98.66.66 0 0 0 .43.15 1.1 1.1 0 0 0 .56-.18l6.37-3.91 6.38 3.92a.81.81 0 0 0 .99.03c.15-.12.37-.41.15-1l-2.77-6.66 4.92-4.26a.84.84 0 0 0 .31-.95zm-.78.53h-.01"
+          fill="#484848"></path>
+        <path d="m11 21.5a.5.5 0 1 1 -.5-.5.5.5 0 0 1 .5.5zm-3.5-15.5a.5.5 0 1 0 .5.5.5.5 0 0 0 -.5-.5zm15 10h-.5v-.5a.5.5 0 0 0 -1 0v .5h-.5a.5.5 0 0 0 0 1h .5v.5a.5.5 0 0 0 1 0v-.5h.5a.5.5 0 0 0 0-1zm-15-13h-.5v-.5a.5.5 0 0 0 -1 0v .5h-.5a.5.5 0 0 0 0 1h .5v.5a.5.5 0 0 0 1 0v-.5h.5a.5.5 0 0 0 0-1zm10.22 7.54a.84.84 0 0 0 -.17-.02q-.28-.01-3.19 0a .6.6 0 0 1 -.55-.35l-1.5-3.23a.42.42 0 0 0 -.75 0l-1.81 4.14a2.92 2.92 0 0 0 4.12 3.72l.46-.26 3.49-2.99.16-.18a.5.5 0 0 0 -.26-.82z"></path>
+      </svg>
+    </div>
+    <div>
+      <p style="padding-left: 30px;"> India homes were rated
+        <strong>4.6 out of 5 stars</strong> with
+        <strong>200,000+ reviews</strong>
+      </p>
+    </div>
+  </div>
+  <div class="row container1">
+    <div class="one-third column">
+      <img src="images/image1.jpg">
+      </a>
+      <span role="img">
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+      </span>
+      <div class="content">
+        <p id="content1">This was an amazing experience. From the beginning of booking, Ashish reached out and was very accommodating. The
+          apartment was beautiful.... </p>
+      </div>
+      <div class="bottomSpace sizechange">
+        <span>
+          <img src="images/airbnbfavicon.png">
+        </span>
+        <span>
+          <strong>Simmy Bajaj</strong>
+          <br/><p>Delhi</p>
+        </span>
+      </div>
+    </div>
+    <div class="one-third column">
+      <img src="images/image2.jpg">
+      <span role="img">
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+      </span>
+      <div class="content">
+        <p id="content1">My girlfriend and I stayed here for two nights and are very happy do have done so. From the moment we arrived Arvind and his wife welcomed us very ...</p>
+      </div>
+      <div class="bottomSpace sizechange">
+          <span>
+            <img src="images/airbnbfavicon.png">
+          </span>
+          <span>
+            <strong>Simmy Bajaj</strong>
+            <br/><p>Delhi</p>
+          </span>
+        </div>
+    </div>
+    <div class="one-third column">
+      <img src="images/image3.jpg">
+      </a>
+      <span role="img">
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="star">
+          <span>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;">
+              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+            </svg>
+          </span>
+        </span>
+      </span>
+      <div class="content">
+        <p id="content1">I had very pleasant and excellent stay at GOAgaga . The flat was very comfortable and the location is great. Ginza is a wonderful host and really helpful ... </p>
+      </div>
+      <div class="bottomSpace sizechange">
+          <span>
+            <img src="images/airbnbfavicon.png">
+          </span>
+          <span>
+            <strong>Simmy Bajaj</strong>
+            <br/><p>Delhi</p>
+          </span>
+        </div>
+    </div>
+  </div>
+  <div class="container1 borderClass">
+    <div class="row">
+      <div class="one-third column">
+        <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 40px; width: 40px; display: block; fill: rgb(65, 198, 188);margin-bottom: 10px;">
+          <path d="m9 10h11a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-11a2 2 0 0 1 -2-2v-5a2 2 0 0 1 2-2zm9.78 4.08a.5.5 0 0 0 -.69.14l-1 1.5a.5.5 0 0 0 .83.56l.01-.01 1-1.5a.5.5 0 0 0 -.14-.69zm-3.78-1.58a.5.5 0 0 0 -.5.5v2a .5.5 0 0 0 1 0v-2a .5.5 0 0 0 -.5-.5zm-3.02.88a.5.5 0 1 0 -.97.25l.5 1.94a.5.5 0 0 0 .97-.25z"></path>
+          <path d="m3.5 2h9.5a2 2 0 0 1 2 2v2.5a2 2 0 0 1 -2 2h-9.5a2 2 0 0 1 -2-2v-2.5a2 2 0 0 1 2-2zm8.42 5.28 1-1.5a.5.5 0 0 0 -.83-.56l-.01.01-1 1.5a.5.5 0 0 0 .83.56zm-2.42-1.28v-2a .5.5 0 0 0 -1 0v2a .5.5 0 0 0 1 0zm-3.38.93a.5.5 0 0 0 .36-.61l-.5-1.94a.5.5 0 0 0 -.97.25l.5 1.94a.5.5 0 0 0 .61.36z"
+            fill="#60B6B5"></path>
+          <path d="m24 12v4.5a4.18 4.18 0 0 1 -4.5 4.5h-2.5v2.5a.5.5 0 0 1 -.5.5.5.5 0 0 1 -.26-.07l-4.88-2.93h-3.86a4.46 4.46 0 0 1 -4.5-4.41v-4.09a.5.5 0 0 1 1 0v4a3.43 3.43 0 0 0 3.35 3.5q.07 0 .15 0h4a .5.5 0 0 1 .26.07l4.24 2.55v-2.12a.5.5 0 0 1 .5-.5h3a3.19 3.19 0 0 0 3.5-3.5v-4.5c0-2.08-1.08-3-3.5-3h-3.23a3.64 3.64 0 0 1 -2.8 1.49h-3.47a.5.5 0 1 1 0-1h3.47a2.69 2.69 0 0 0 2.07-1.18c.01-.01.02-.02.02-.04a2.3 2.3 0 0 0 .44-1.29v-3.53a2.83 2.83 0 0 0 -2.53-2.45h-9.96a2.69 2.69 0 0 0 -2.51 2.45v3.53a2.37 2.37 0 0 0 2.5 2.5h3.02a.5.5 0 0 1 .5.5v2l1.43-1.09a.5.5 0 0 1 .61.79l-2.23 1.71a.5.5 0 0 1 -.3.1.49.49 0 0 1 -.22-.05.5.5 0 0 1 -.28-.45v-2.51h-2.53a3.39 3.39 0 0 1 -3.5-3.27q0-.11 0-.23v-3.53a3.67 3.67 0 0 1 3.51-3.45h9.96a3.84 3.84 0 0 1 3.53 3.45v3.53a3.05 3.05 0 0 1 -.19 1.02h2.69c3.72 0 4.5 2.17 4.5 4z"
+            fill="#484848"></path>
+        </svg>
+        <div>
+          <p class="contentsize">
+            <strong>24/7 customer support</strong>
+            <br/> Day or night, we’re here for you. Talk to our support team from anywhere in the world, any hour of day.</p>
+        </div>
+      </div>
+      <div class="one-third column">
+        <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 40px; width: 40px; display: block; fill: rgb(65, 198, 188);margin-bottom: 10px;">
+          <path d="m13.5 17.6c0-1.2 1.1-2.7 2.6-2.7 1 0 2.6.9 2.6 2.7v4.7h-5.3z"></path>
+          <path d="m23.4 8.3c-.2.2-.5.3-.7.1l-1.5-1c-.1-.1-.2-.2-.2-.4v-4.5c0-.2-.3-.5-.5-.5h-2c-.2 0-.5.3-.5.5v2c0 .2-.1.3-.3.4s-.3.1-.5 0l-4.6-2.8c-.1-.1-.2-.1-.3 0l-11.1 6.3c-.1 0-.2.1-.2.1-.2 0-.3-.1-.4-.3s-.1-.5.2-.7l11.1-6.3c.4-.2.9-.2 1.3 0l3.8 2.3v-1.1c0-.8.7-1.5 1.5-1.5h2c.8 0 1.5.7 1.5 1.5v4.2l1.3.9c.2.2.3.5.1.7zm-16.4 2.7c0-.6.4-1 1-1s1 .4 1 1-.4 1-1 1-1-.4-1-1zm3 0c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2zm12 11.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5v-12.8c0-.3.2-.5.5-.5s.5.2.5.5zm-9-.5v-6c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5v6zm6-6c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v6h-9v-12.5c0-.3-.2-.5-.5-.5s-.5.2-.5.5v12.5c0 .6.4 1 1 1h9 7c.3 0 .5-.2.5-.5s-.2-.5-.5-.5z"
+            fill="#484848"></path>
+        </svg>
+        <div>
+          <p class="contentsize">
+            <strong>Global hospitality standards</strong>
+            <br/> Guests review their hosts after each stay. All hosts must maintain a minimum rating and our hospitality standards
+            to be on Airbnb.</p>
+        </div>
+
+
+      </div>
+      <div class="one-third column">
+        <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 40px; width: 40px; display: block; fill: rgb(65, 198, 188);margin-bottom: 10px;">
+          <path d="m21.95 9.48a.84.84 0 0 0 -.87-.48h-4.62a.5.5 0 0 0 0 1l4.14.01-4.81 4.17a.5.5 0 0 0 -.14.57l2.65 6.38-6.07-3.72a.5.5 0 0 0 -.52 0l-6.08 3.72 2.65-6.37a.5.5 0 0 0 -.13-.57l-4.75-4.18h5.75a.5.5 0 0 0 .46-.3l2.37-5.37 1.58 3.57a.5.5 0 0 0 .91-.41l-1.72-3.88a.8.8 0 0 0 -1.56-.01l-2.38 5.39h-5.9a.83.83 0 0 0 -.87.48.85.85 0 0 0 .32.96l4.85 4.25-2.78 6.67a.81.81 0 0 0 .16.98.66.66 0 0 0 .43.15 1.1 1.1 0 0 0 .56-.18l6.37-3.91 6.38 3.92a.81.81 0 0 0 .99.03c.15-.12.37-.41.15-1l-2.77-6.66 4.92-4.26a.84.84 0 0 0 .31-.95zm-.78.53h-.01"
+            fill="#484848"></path>
+          <path d="m11 21.5a.5.5 0 1 1 -.5-.5.5.5 0 0 1 .5.5zm-3.5-15.5a.5.5 0 1 0 .5.5.5.5 0 0 0 -.5-.5zm15 10h-.5v-.5a.5.5 0 0 0 -1 0v .5h-.5a.5.5 0 0 0 0 1h .5v.5a.5.5 0 0 0 1 0v-.5h.5a.5.5 0 0 0 0-1zm-15-13h-.5v-.5a.5.5 0 0 0 -1 0v .5h-.5a.5.5 0 0 0 0 1h .5v.5a.5.5 0 0 0 1 0v-.5h.5a.5.5 0 0 0 0-1zm10.22 7.54a.84.84 0 0 0 -.17-.02q-.28-.01-3.19 0a .6.6 0 0 1 -.55-.35l-1.5-3.23a.42.42 0 0 0 -.75 0l-1.81 4.14a2.92 2.92 0 0 0 4.12 3.72l.46-.26 3.49-2.99.16-.18a.5.5 0 0 0 -.26-.82z"></path>
+        </svg>
+        <div>
+          <p class="contentsize">
+            <strong>5-star hosts</strong>
+            <br/> From fresh-pressed sheets to tips on where to get the best brunch, our hosts are full of local hospitality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container1 borderClass">
+    <h4>Homes in India</h4>
+    <div class="row">
+      <div class="three columns contentsize">
+        <img src="images/image1.jpg">
+        <p style="margin-bottom: 0rem;"><strong id="textSmall1">PRIVATE ROOM · KOCHI</strong><br/>
+        <strong>Sea Hut Homestay with Aircon..</strong><br/>
+          Price₹1,513per night·Free cancellation
+      </p>
+      <div class="smallContainer">
+      <div class="smallImages">
+          <span role="img">
+              <span class="star">
+                <span style="position:relative;">
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+              <span class="star">
+                <span>
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+              <span class="star">
+                <span>
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+              <span class="star">
+                <span>
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+              <span class="star">
+                <span>
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            <span style="position: absolute;">204 . Superhot</span>
+          </div>
+        </div>
+      </div>
+      <div class="three columns contentsize">
+          <img src="images/image2.jpg">
+          <p style="margin-bottom: 0rem;"><strong  id="textSmall2">PRIVATE ROOM · NEW DELHI</strong><br/>
+            <strong>Lake View Room - Hauz Khas Village</strong><br/>
+            Price₹3,989per night·Free cancellation
+          </p>
+          <div class="smallContainer">
+      <div class="smallImages">
+          <span role="img">
+              <span class="star">
+                <span style="position:relative;">
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+              <span class="star">
+                <span>
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+              <span class="star">
+                <span>
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+              <span class="star">
+                <span>
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+              <span class="star">
+                <span>
+                  <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                    <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            <span style="position: absolute;">204 . Superhot</span>
+          </div>
+        </div>
+        </div>
+        <div class="three columns contentsize ">
+            <img src="images/image3.jpg">
+            <p style="margin-bottom: 0rem;"><strong id="textSmall3">ENTIRE CHALET · PANJIM</strong><br/>
+              <strong>WOODEN CHALET ON THE RIVER BANKS</strong><br/>
+              Price₹3,989per night·Free cancellation
+            </p>
+            <div class="smallContainer">
+                <div class="smallImages">
+                    <span role="img">
+                        <span class="star">
+                          <span style="position:relative;">
+                            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                            </svg>
+                          </span>
+                        </span>
+                        <span class="star">
+                          <span>
+                            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                            </svg>
+                          </span>
+                        </span>
+                        <span class="star">
+                          <span>
+                            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                            </svg>
+                          </span>
+                        </span>
+                        <span class="star">
+                          <span>
+                            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                            </svg>
+                          </span>
+                        </span>
+                        <span class="star">
+                          <span>
+                            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; display: block; fill: currentcolor;">
+                              <path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                            </svg>
+                          </span>
+                        </span>
+                      </span>
+                      <span style="position: absolute;">204 . Superhot</span>
+                    </div>
+                  </div>
+          </div>
+          <div class="three columns">
+              <img src="images/home.jpg">
+            </div>
+    </div>
+    <div class="contentContainer">
+    <strong>When are you traveling?</strong>
+    <h6>Add dates for updated pricing and availability.</h6>
+  </div>
+    <button class="addDate" type="button">
+       <span> Add Dates</span>
+    </button>
+  </div>
+<div class="borderClass">
+  <div class="borderClass1 container1">
+    <div class="row">
+    <div class="footer three columns">
+      <section>
+        <strong>Airbnb</strong>
+        <ul>
+          <br/>
+          <li>Career</li>
+          <li>Press</li>
+          <li>Policies</li>
+          <li>Help</li>
+          <li>Diversity and Belonging</li>
+        </ul>
+      </section>
+    </div>
+    <div class="footer three columns">
+        <section>
+          <strong>Discover</strong>
+          <ul>
+            <br/>
+            <li>Trust and Safety</li>
+            <li>Invite Friends</li>
+            <li>Airbnb Citizen</li>
+            <li>Business Travel</li>
+            <li>Guidebooks</li>
+            <li>Airbnbmag</li>
+            <li>Events</li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer three columns">
+          <section>
+            <strong>Hosting</strong>
+            <ul>
+              <br/>
+              <li>Why Host</li>
+              <li>Refer Hosts</li>
+              <li>Hospitality</li>
+              <li>Responsible Hosting</li>
+              <li>Community Center</li>
+            </ul>
+          </section>
+        </div>
+        <div class="footer three columns">
+            <section>
+
+              <span id="facebook">
+                <svg viewBox="0 0 32 32" role="img" aria-label="Facebook" focusable="false" style="height: 18px; width: 18px; display: block; fill: rgb(118, 118, 118);"><path d="m8 14.41v-4.17c0-.42.35-.81.77-.81h2.52v-2.08c0-4.84 2.48-7.31 7.42-7.35 1.65 0 3.22.21 4.69.64.46.14.63.42.6.88l-.56 4.06c-.04.18-.14.35-.32.53-.21.11-.42.18-.63.14-.88-.25-1.78-.35-2.8-.35-1.4 0-1.61.28-1.61 1.73v1.8h4.52c.42 0 .81.42.81.88l-.35 4.17c0 .42-.35.71-.77.71h-4.21v16c0 .42-.35.81-.77.81h-5.21c-.42 0-.8-.39-.8-.81v-16h-2.52a.78.78 0 0 1 -.78-.78" fill-rule="evenodd"></path></svg>
+              </span>
+              <span id="twitter">
+                <svg viewBox="0 0 32 32" role="img" aria-label="Twitter" focusable="false" style="height: 18px; width: 18px; display: block; fill: rgb(118, 118, 118);"><path d="m31 6.36c-1.16.49-2.32.82-3.55.95 1.29-.76 2.22-1.87 2.72-3.38a13.05 13.05 0 0 1 -3.91 1.51c-1.23-1.28-2.75-1.94-4.51-1.94-3.41 0-6.17 2.73-6.17 6.12 0 .49.07.95.17 1.38-4.94-.23-9.51-2.6-12.66-6.38-.56.95-.86 1.97-.86 3.09 0 2.07 1.03 3.91 2.75 5.06-1-.03-1.92-.3-2.82-.76v.07c0 2.89 2.12 5.42 4.94 5.98-.63.17-1.16.23-1.62.23-.3 0-.7-.03-1.13-.13a6.07 6.07 0 0 0 5.74 4.24c-2.22 1.74-4.78 2.63-7.66 2.63-.56 0-1.06-.03-1.43-.1 2.85 1.84 6 2.76 9.41 2.76 7.29 0 12.83-4.01 15.51-9.3 1.36-2.66 2.02-5.36 2.02-8.09v-.46c-.03-.17-.03-.3-.03-.33a12.66 12.66 0 0 0 3.09-3.16" fill-rule="evenodd"></path></svg>
+              </span>
+              <span id="instagram">
+                <svg viewBox="0 0 24 24" role="img" aria-label="Instagram" focusable="false" style="height: 18px; width: 18px; display: block; fill: rgb(118, 118, 118);"><path d="m23.09.91c-.61-.61-1.33-.91-2.17-.91h-17.84c-.85 0-1.57.3-2.17.91s-.91 1.33-.91 2.17v17.84c0 .85.3 1.57.91 2.17s1.33.91 2.17.91h17.84c.85 0 1.57-.3 2.17-.91s.91-1.33.91-2.17v-17.84c0-.85-.3-1.57-.91-2.17zm-14.48 7.74c.94-.91 2.08-1.37 3.4-1.37 1.33 0 2.47.46 3.41 1.37s1.41 2.01 1.41 3.3-.47 2.39-1.41 3.3-2.08 1.37-3.41 1.37c-1.32 0-2.46-.46-3.4-1.37s-1.41-2.01-1.41-3.3.47-2.39 1.41-3.3zm12.66 11.63c0 .27-.09.5-.28.68a.92.92 0 0 1 -.67.28h-16.7a.93.93 0 0 1 -.68-.28.92.92 0 0 1 -.27-.68v-10.13h2.2a6.74 6.74 0 0 0 -.31 2.05c0 2 .73 3.71 2.19 5.12s3.21 2.12 5.27 2.12a7.5 7.5 0 0 0 3.75-.97 7.29 7.29 0 0 0 2.72-2.63 6.93 6.93 0 0 0 1-3.63c0-.71-.11-1.39-.31-2.05h2.11v10.12zm0-13.95c0 .3-.11.56-.31.77a1.05 1.05 0 0 1 -.77.31h-2.72c-.3 0-.56-.11-.77-.31a1.05 1.05 0 0 1 -.31-.77v-2.58c0-.29.11-.54.31-.76s.47-.32.77-.32h2.72c.3 0 .56.11.77.32s.31.47.31.76z" fill-rule="evenodd"></path></svg>
+              </span>
+              <br/>
+              <br/>
+                <ul>
+                <li>Terms</li>
+                <li>Privacy</li>
+                <li>Site Map</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+  </div>
+  <div class="container1">
+    <div>
+      <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 1.5em; width: 1.5em; display: block; fill: rgb(118, 118, 118);padding-top: 5px; position: relative;"><path d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"></path></svg>
+    </div>
+      <div style="position: absolute;margin-top: -23px; padding-left: 30px;">
+          © Airbnb, Inc.
+      </div>
+  </div>
+</div>
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
